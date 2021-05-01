@@ -1,0 +1,66 @@
+
+/*
+Desenvolvido por: Sergio Henrique
+Data: 01/05/2021
+Ativade: 3
+*/
+  
+  
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+
+public class Main
+{
+	public static void main(String[] args) {
+		ArrayList<Integer> lista = new ArrayList<>(5);
+		ArrayDeque<Integer> pilha = new ArrayDeque<>(5);
+		ArrayDeque<Integer> fila = new ArrayDeque<>(10);
+		
+		/* Inserir elementos na LISTA */
+		lista.add(1);
+		lista.add(2);
+		lista.add(3);
+		lista.add(4);
+		lista.add(5);
+		
+		
+		/* Remover elementos da LISTA e inserir na PILHA */
+		int dados = 0;
+		
+		while(!lista.isEmpty()){
+		    dados = lista.remove(0);
+		    pilha.push(dados);
+		}
+		
+		/* Remover os dados da PILHA e inserir em uma FILA */
+		
+		while(!pilha.isEmpty()){
+		    dados = pilha.pop();
+		    fila.add(dados);
+		}
+		
+		/*Inserir os número [6,7,8,9 e 10] na LISTA*/
+		lista.add(6);
+		lista.add(7);
+		lista.add(8);
+		lista.add(9);
+		lista.add(10);
+		
+		
+		/* Remover elementos da LISTA e inserir na PILHA */
+
+		while(!lista.isEmpty()){
+		    dados = lista.remove(0);
+		    pilha.push(dados);
+		}
+		
+		/* Remover os dados da PILHA e inserir em uma FILA */
+		
+		while(!pilha.isEmpty()){
+		    dados = pilha.pop();
+		    fila.add(dados);
+		}
+		
+		System.out.println(fila);
+	}
+}
